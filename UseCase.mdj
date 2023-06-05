@@ -1238,11 +1238,11 @@
 												"$ref": "AAAAAAGIiS95vMVZLnk="
 											},
 											"font": "Arial;13;1",
-											"left": 441.5,
+											"left": 444,
 											"top": 338.5,
-											"width": 126,
+											"width": 138,
 											"height": 13,
-											"text": "review products"
+											"text": "submit product review"
 										},
 										{
 											"_type": "LabelView",
@@ -1273,9 +1273,9 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 436.5,
+									"left": 439,
 									"top": 331.5,
-									"width": 136,
+									"width": 148.68994140625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGIiS95vMVaIow="
@@ -1375,7 +1375,7 @@
 							"containerChangeable": true,
 							"left": 408,
 							"top": 320,
-							"width": 193,
+							"width": 210,
 							"height": 49,
 							"nameCompartment": {
 								"$ref": "AAAAAAGIiS95vMVZLnk="
@@ -3376,7 +3376,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 331,
+									"left": 334,
 									"top": 239,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -3397,7 +3397,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 337,
+									"left": 340,
 									"top": 225,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -3418,7 +3418,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 318,
+									"left": 321,
 									"top": 266,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -3502,7 +3502,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 433,
+									"left": 440,
 									"top": 288,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -3522,7 +3522,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 437,
+									"left": 444,
 									"top": 275,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -3542,7 +3542,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 426,
+									"left": 433,
 									"top": 315,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -3588,7 +3588,7 @@
 								"$ref": "AAAAAAGIiSXGCsNrQ44="
 							},
 							"lineStyle": 1,
-							"points": "199:200;451:319",
+							"points": "199:200;458:319",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAGIiTaKptXjUTg="
@@ -4419,7 +4419,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGIiSW2PMNkank="
 					},
-					"name": "review products"
+					"name": "submit product review"
 				},
 				{
 					"_type": "UMLUseCaseSubject",
