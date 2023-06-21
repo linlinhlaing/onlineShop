@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <title>About</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<header th:replace="fragments/header.html :: header"> </header>
+<main>
+    <div id="mainContainer" class="container">
+        <h3>About</h3>
+        <p>THE LATEST BEAUTY INNOVATION AROUND WORLD.</p>
+        <div class="row">
+            <div class="col-6">
+                <img src="/img/about.jpg" style="width: 100%"/>
+            </div>
+
+            <div class="col-6">
+                <p><b>ABOUT</b></p>
+                <p>Our page was established in 2023.
+                    Our mission is to combine the latest technology and natural ingredients to
+                    offer our customers the best quality, innovative and effective products.</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+<div>
+    <div th:replace="fragments/footer.html :: footer"></div>
+</div>
+
+</body>
+
+</html>

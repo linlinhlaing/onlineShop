@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<header th:replace="fragments/header.html :: header"> </header>
+<main>
+    <div id="mainContainer" class="container">
+        <h2 style="color: #1aa43b">Welcome to our page</h2>
+        <hr/>
+        <div class="row">
+        <div class="col-12">
+            <img src="/img/homepage.jpg" style="height: 500px;"/>
+        </div>
+        <div class="col-12" style="font-size: 1em; margin-top: .75em;">
+            <p>To browse or manage data for collection of <a href="/product/list">Products</a>
+                please first make sure to read the  instructions and key points provided below.
+                And then click the appropriate menu item, located on the nav-bar above.
+
+            </p>
+            <hr>
+        </div>
+        </div>
+
+
+</div>
+</main>
+<div>
+    <div th:replace="fragments/footer.html :: footer"></div>
+</div>
+
+</body>
+
+</html>

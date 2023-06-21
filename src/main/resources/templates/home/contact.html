@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <title>Contact</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<header th:replace="fragments/header.html :: header"> </header>
+<main>
+    <div id="mainContainer" class="container">
+        <h3>Contact</h3>
+        <p>WE WILL GET BACK TO YOU.</p>
+        <div class="row">
+            <div class="col-6">
+                <img src="/img/contact.jpg" style="width: 100%"/>
+            </div>
+            <form class="col-6" method="post" action="/willContact">
+                <div >
+                    <p><b>Say Hello</b></p>
+                    <div>
+                        <label for="name">Your name*</label>
+                    </div>
+                    <div>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div>
+                        <label for="email">Email Address*</label>
+                    </div>
+                    <div>
+                        <input type="text" name="email" id="email"/>
+                    </div>
+                    <div>
+                        <label>Your Phone</label>
+                    </div>
+                    <div>
+                        <input type="text" name="phone" id="phone"/>
+                    </div>
+                    <div>
+                        <label>Your Message</label>
+                    </div>
+                    <div>
+                        <textarea name="message" id="message"  rows="4" cols="50"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-success me-2" type="submit">Send Message</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+<div>
+    <div th:replace="fragments/footer.html :: footer"></div>
+</div>
+
+</body>
+
+</html>

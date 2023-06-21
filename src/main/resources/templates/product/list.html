@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+  <title>Product list</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<header th:replace="fragments/header.html :: header"> </header>
+<main>
+
+    <div th:each="product : ${products}">
+        <form method="post" th:action="@{/addToCart/} + ${product.id}">
+
+      <span th:text="${product.name}" />
+      <span th:text="${product.price}" />
+      <span th:text="${product.description}" />
+      <button  type="submit">Add to Cart</button>
+        </form>
+
+    </div>
+
+</main>
+<div>
+  <div th:replace="fragments/footer.html :: footer"></div>
+</div>
+
+</body>
+
+</html>

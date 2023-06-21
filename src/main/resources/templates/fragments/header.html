@@ -1,0 +1,30 @@
+
+<header xmlns:th="http://thymeleaf.org" th:fragment="header">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div>
+      <img src="/img/logon.png" width = "100" >
+      <a class="lsnav" href="/">Home</a>
+      <a class="lsnav" href="/product/list">Products</a>
+      <a class="lsnav" href="/about">About</a>
+      <a class="lsnav" href="/contact">Contact</a>
+      <a class="lsnav" href="/cart">Cart</a>
+
+    </div>
+    <div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success me-2" type="submit">Search</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</nav>
+</header>
