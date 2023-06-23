@@ -8,7 +8,7 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
   <header th:replace="fragments/header.html :: header"></header>
   <main>
-    <form action="/cart/payment" method="post"th:object="${address}" >
+    <form action="/order/payment" method="post"th:object="${address}" >
     <div class="container mt-4">
       <h1>Checkout</h1>
       <div class="row">
