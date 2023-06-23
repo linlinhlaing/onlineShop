@@ -4,17 +4,16 @@ import edu.miu.cs.cs425.onlineShop.Service.CartProductService;
 import edu.miu.cs.cs425.onlineShop.Service.CartService;
 import edu.miu.cs.cs425.onlineShop.Service.CustomerService;
 import edu.miu.cs.cs425.onlineShop.Service.ProductService;
-import edu.miu.cs.cs425.onlineShop.model.Cart;
-import edu.miu.cs.cs425.onlineShop.model.CartProduct;
-import edu.miu.cs.cs425.onlineShop.model.Customer;
-import edu.miu.cs.cs425.onlineShop.model.Product;
+import edu.miu.cs.cs425.onlineShop.model.*;
 import edu.miu.cs.cs425.onlineShop.repository.CartProductRepository;
 import edu.miu.cs.cs425.onlineShop.repository.CustomerRepository;
-import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,4 +87,16 @@ public class ProductController {
         System.out.println("testing"+productId);
         return "redirect:/product/list";
     }
+
+   @GetMapping("/search")
+    public String search (@ModelAttribute Search search, Model model)
+{
+
+    var products= productService.searchProductList(search.getName());
+
+    model.addAttribute("products", products);
+
+    return "/product/list";
+}
+
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class ProductServieImpl implements ProductService {
+public class ProductServiceImpl implements ProductService {
     @Autowired
     ProductRepository productRepository;
     @Override
@@ -20,4 +20,10 @@ public class ProductServieImpl implements ProductService {
     public Product findById(Long productId) {
         return productRepository.findById(productId).get();
     }
+
+    @Override
+    public List<Product> searchProductList(String Name) {
+        return productRepository.findAllByNameContainingIgnoreCase(Name);
+    }
+
 }
