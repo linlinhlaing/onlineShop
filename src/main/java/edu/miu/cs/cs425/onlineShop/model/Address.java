@@ -16,13 +16,13 @@ public class Address {
     @GeneratedValue
     @Column(name = "addressId")
     private Long id;
-    @NotBlank(message = "street is required")
+    @NotBlank(message = "Street is required")
     private String street;
-    @NotBlank(message = "city is required")
+    @NotBlank(message = "City is required")
     private String city;
-    @NotBlank(message = "state is required")
+    @NotBlank(message = "State is required")
     private String state;
-    @NotBlank(message = "zipCode is required")
+    @NotBlank(message = "ZipCode is required")
     private String zipCode;
 
     public Address(String street, String city, String state, String zipCode) {

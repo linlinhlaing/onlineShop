@@ -7,4 +7,5 @@ import org.springframework.stereotype.Service;
 public interface CartProductService {
     public abstract CartProduct saveCartProduct(CartProduct cartProduct);
     public abstract CartProduct findById(Long cartProductId);
+    public abstract void removeByCartProductId(Long cartProductId);
 }

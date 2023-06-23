@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -127,12 +128,24 @@ public class ProductController {
         return "cart/checkout";
         }
     @PostMapping(value = "/cart/payment")
-    public String displayPaymentPage(@ModelAttribute("address") Address address, Model model) {
+    public String displayPaymentPage( @Valid @ModelAttribute("address") Address address, BindingResult bindingResult, Model model) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("error", bindingResult.getAllErrors());
+            return "cart/checkout";
+        }
         Customer customer = customerService.getLoginCustomer();
         customer.setAddress(address);
         addressService.saveAddress(address);
         customerService.saveCustomer(customer);
         return "cart/payment";
+    }
+
+
+
+    @GetMapping(value = "/remove/{cartProductId}")
+    public String deleteStudent(@PathVariable Long cartProductId) {
+        cartProductService.removeByCartProductId(cartProductId);
+        return "redirect:/product/cart";
     }
     }
 
