@@ -3,44 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-  <style>
-    body{
-      background: lightblue;
-    }
-    .container{
-      display: flex;
-      justify-content: center;
-      padding-top: 20%;
-    }
-    .login{
+    <style>
+        body{
+            background: lightblue;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            padding-top: 20%;
+        }
+        .login{
 
-    }
-    form{
-      width:100%;
-    }
-    div{
-      margin:6%;
-    }
-  </style>
+        }
+        form{
+            width:100%;
+        }
+        div{
+            margin:6%;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+<div class="container">
     <div class="login">
-      <h2>Login Page</h2>
-      <form th:action="@{/login/}" th:object="${user}" method="post">
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required/>
-        </div>
-        <div>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required/>
-        </div>
-        <div>
-          <button type="submit">Login</button>
-        </div>
-      </form>
+        <h2>Login Page</h2>
+        <form th:action="@{/login/}" th:object="${user}" method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required/>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required/>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
     </div>
-  </div>
+</div>
 </body>
 </html>

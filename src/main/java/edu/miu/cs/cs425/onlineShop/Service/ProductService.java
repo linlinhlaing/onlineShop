@@ -10,7 +10,5 @@ public interface ProductService {
     public abstract List<Product> getAllProduct();
     public abstract Product findById(Long productId);
 
-
-    List<Product> searchProductList(String studentName);
-
+    List<Product> searchProductList(String name);
 }

@@ -25,5 +25,4 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> searchProductList(String Name) {
         return productRepository.findAllByNameContainingIgnoreCase(Name);
     }
-
 }

@@ -87,6 +87,7 @@ public class OnlineShopApplication implements CommandLineRunner {
 		}
 	}
 
+
 	@Override
 	public void run(String... args) throws Exception {
 		Address address = new Address("1000N", "Fairfield", "Iowa", "52557");
