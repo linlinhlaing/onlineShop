@@ -9,4 +9,8 @@ import java.util.List;
 public interface ProductService {
     public abstract List<Product> getAllProduct();
     public abstract Product findById(Long productId);
+
+
+    List<Product> searchProductList(String studentName);
+
 }
