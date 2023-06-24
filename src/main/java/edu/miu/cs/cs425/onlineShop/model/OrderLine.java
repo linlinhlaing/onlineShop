@@ -15,7 +15,7 @@ import java.util.List;
 @Table(name = "orderlines")
 public class OrderLine {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderLineId;
     private int quantity;
     private double totalPrice;

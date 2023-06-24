@@ -15,7 +15,7 @@ import java.util.List;
 @Entity
 public class CartProduct {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartProductId;
     private int quantity;
     private double totalPrice;

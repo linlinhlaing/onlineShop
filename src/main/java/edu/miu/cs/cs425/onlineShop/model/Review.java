@@ -16,7 +16,7 @@ import java.time.LocalDate;
 //TODO For future implementation
 public class Review {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reviewId")
     private Long id;
     private String name;

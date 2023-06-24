@@ -13,7 +13,7 @@ import lombok.*;
 @Entity
 public class Address {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "addressId")
     private Long id;
     @NotBlank(message = "Street is required")

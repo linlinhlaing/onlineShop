@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "carts")
 public class Cart {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long cartId;
     private double totalPrice;
 //    @OneToMany(cascade = {CascadeType.ALL, CascadeType.REMOVE},fetch = FetchType.EAGER)
