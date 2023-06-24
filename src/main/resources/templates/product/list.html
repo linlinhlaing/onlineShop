@@ -8,16 +8,26 @@
 <header th:replace="fragments/header.html :: header"> </header>
 <main>
 
-    <div th:each="product : ${products}">
-        <form method="post" th:action="@{/addToCart/} + ${product.id}">
+<div class="container mt-4" >
+    <h4 th:text="${title}"></h4>
 
-      <span th:text="${product.name}" />
-      <span th:text="${product.price}" />
-      <span th:text="${product.description}" />
-      <button  type="submit">Add to Cart</button>
-        </form>
-
+    <div class="row mb-4" >
+        <div class="col-auto mt-2" th:each="product : ${products}" >
+            <form method="post" th:action="@{/addToCart/} + ${product.id}">
+            <div class="card" style="width: 13rem;">
+                <img th:src="${product.image}" alt="">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${product.name}" ></h5>
+                    <p class="fw-bold" th:text="${product.price}"></p>
+                    <p class="card-text" th:text="${product.description}"></p>
+                    <button class="btn btn-outline-primary" type="submit">Add to Cart</button>
+                </div>
+            </div>
+            </form>
+        </div>
     </div>
+</div>
+
 
 </main>
 <div>

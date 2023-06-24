@@ -2,6 +2,8 @@ package edu.miu.cs.cs425.onlineShop.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.List;
 
@@ -13,12 +15,11 @@ import java.util.List;
 @Entity
 public class CartProduct {
     @Id
-    @GeneratedValue
-    @Column(name = "cartProductId")
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long cartProductId;
     private int quantity;
     private double totalPrice;
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Product product;
     public CartProduct(int quantity,double totalPrice) {
         this.quantity = quantity;

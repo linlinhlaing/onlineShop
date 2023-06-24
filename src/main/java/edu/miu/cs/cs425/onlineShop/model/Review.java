@@ -13,9 +13,10 @@ import java.time.LocalDate;
 @ToString
 @Entity
 @Table(name = "reviews")
+//TODO For future implementation
 public class Review {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reviewId")
     private Long id;
     private String name;

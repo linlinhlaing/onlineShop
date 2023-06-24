@@ -15,13 +15,12 @@ import java.util.List;
 @Table(name = "orderlines")
 public class OrderLine {
     @Id
-    @GeneratedValue
-    @Column(name = "orderLineId")
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long orderLineId;
     private int quantity;
     private double totalPrice;
-    @OneToMany
-    private List<Product> productList;
+    @OneToOne
+    private Product product;
 
 
     public OrderLine(int quantity, double totalPrice) {

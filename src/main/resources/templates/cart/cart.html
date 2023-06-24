@@ -1,10 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Cart</title>
+    <title>Product list</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<p>cart</p>
+<header th:replace="fragments/header.html :: header"></header>
+<main>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-8">
+                <div class="row g-0" th:each="cartproduct : ${cartproducts}">
+
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-auto" style="text-align: center;">
+                                <img th:src="${cartproduct.getProduct().getImage()}" alt="" height="120px">
+                            </div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <h5 class="card-title" th:text="${cartproduct.getProduct().getName()}"></h5>
+                                    <p th:text="'Per price $'+${cartproduct.getProduct().getPrice()}"></p>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card-body">
+                                    <label>Qty:</label><span th:text=" ${cartproduct.getQuantity()}"></span>
+                                </div>
+
+                            </div>
+                            <div class="col-3">
+                                <div class="card-body">
+                                    <p th:text="'$'+${cartproduct.getTotalPrice()}"></p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card-body">
+                                    <a class="btn btn-outline-secondary" th:href="@{'/product/remove/{cartProductId}'(cartProductId=${cartproduct.cartProductId})}">remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+                <div class="col-4">
+                    <form action="/product/checkout" method="get">
+                    <ul class="list-group">
+                        <li class="list-group-item">Total</li>
+                        <li class="list-group-item" th:text="'$'+ ${sum}"></li>
+                        <li class="list-group-item">
+                            <button class="btn btn-primary" type="submit">Checkout</button>
+
+                        </li>
+                    </ul>
+                    </form>
+                </div>
+
+
+        </div>
+    </div>
+</main>
+<div>
+    <div th:replace="fragments/footer.html :: footer"></div>
+</div>
+
+
 </body>
+
 </html>

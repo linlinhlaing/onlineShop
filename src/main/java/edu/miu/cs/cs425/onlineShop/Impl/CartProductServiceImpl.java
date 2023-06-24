@@ -19,4 +19,11 @@ public class CartProductServiceImpl implements CartProductService {
     public CartProduct findById(Long cartProductId) {
         return cartProductRepository.findById(cartProductId).get();
     }
+
+    @Override
+    public void removeByCartProductId(Long cartProductId) {
+        CartProduct cartProduct = cartProductRepository.findById(cartProductId).get();
+        cartProductRepository.deleteCarts_cart_product(cartProductId);
+        cartProductRepository.delete(cartProduct);
+    }
 }
