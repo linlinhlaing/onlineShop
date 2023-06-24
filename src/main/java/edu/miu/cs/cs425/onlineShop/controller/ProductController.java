@@ -2,11 +2,9 @@ package edu.miu.cs.cs425.onlineShop.controller;
 
 import edu.miu.cs.cs425.onlineShop.Service.*;
 import edu.miu.cs.cs425.onlineShop.model.*;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
